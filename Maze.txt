@@ -6,11 +6,18 @@ async function startProgram() {
 	setMainLed({ r: 255, g: 255, b: 255 });
 
 	await speak("Start", true);
-
+	await scrollMatrixText('Start', ({r: 0, g: 255,b: 0}), 15, false);
+	//checkpoint 1 blue dot
 	await delay(1);
-
-	await roll(0,55,3);
-	
+	await roll(0,50,3);
 	setMainLed({r: 0, g: 0, b: 255});
+	//checkpoint 2 music note 1
+
+	await roll (0, 40, 1);
+
+	await roll (0, 35, 4); 
+
+	await roll (0, 35, 4); 
+	await Sound.Game.LevelUp.play(true);
 }
 
