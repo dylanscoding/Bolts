@@ -9,12 +9,26 @@ async function startProgram() {
 	await scrollMatrixText('Start', ({r: 0, g: 255,b: 0}), 15, false);
 	//checkpoint 1 blue dot
 	await delay(1);
-	await roll(0,50,3);
+	await roll(0,52,3);
 	setMainLed({r: 0, g: 0, b: 255});
 	stopRoll();
 	//checkpoint 2 music note 1
-	await roll (90, 40, 3);
-	await roll (180, 20, 2); 
-	await roll (230, 35, 2); 
-	await Sound.Game.LevelUp.play(true);
+	await roll (90, 42, 3);
+	await roll (180, 35, 2); 
+	await Sound.ScienceFiction.Wobble.play (true);
+	await roll (215, 36, 2); 
+	//checkpoint 3 red
+	setMainLed({r: 255, g: 0, b: 0}); 
+	await roll (130, 44, 1); 
+	await roll (40, 35, 2); 
+	//checkpoint 4 music note 2
+	await Sound.Animal.Frog.play (true);
+	await roll (120, 25, 2);
+	await roll (180, 30, 2);
+	await roll (90, 15, 2); 
+	//green dot
+	setMainLed({r: 0, g: 255, b: 0});
+	await roll (90, 15, 2); 
+	await roll (320, 25, 2); 
+	await roll (0, 75, 2); 
 }
