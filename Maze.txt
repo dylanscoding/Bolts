@@ -21,5 +21,10 @@ async function startProgram() {
 	setMainLed({r: 255, g: 0, b: 0}); 
 	await roll (130, 44, 1); 
 	await roll (40, 35, 2); 
+	//checkpoint 4 music note 2
+	await Sound.Animal.Frog.play (true);
+	await roll (120, 25, 2);
+	await roll (180, 30, 2);
+	await roll (90, 15, 2); 
 	
 }
